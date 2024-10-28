@@ -5,7 +5,8 @@
 Подсчитайте количество книг каждого автора. Done
 Подсчитайте количество книг в каждом жанре. Done
 Найдите самого популярного автора и жанр. Done
-Отобразить топ-3 самых популярных авторов и жанров.
+Отобразить топ-3 самых популярных авторов и жанров. Done
+            Done.
 """
 
 
@@ -40,3 +41,9 @@ genre_counts = Counter(book["genre"] for book in books)
 
 print(author_counts.most_common(1)[0][0])
 print(genre_counts.most_common(1)[0][0])
+
+
+top_authors = list(author_counts)
+top_genre = list(genre_counts)
+
+print(f"            Top 3 authors\n1. {top_authors[0]}\n2. {top_authors[1]}\n3. {top_authors[2]}\n            Top 3 genre\n1. {top_genre[0]}\n2. {top_genre[1]}\n3. {top_genre[2]}")
